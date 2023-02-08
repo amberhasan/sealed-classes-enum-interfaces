@@ -9,8 +9,14 @@ class MainActivity : AppCompatActivity() {
 
         val error: HttpError = HttpError.NotFound
         when(error){
-            HttpError.NotFound -> TODO()
-            HttpError.Unauthorized -> TODO()
+            HttpError.NotFound -> Unit
+            HttpError.Unauthorized -> Unit
+        }
+
+        val errorEnum: HttpErrorEnum = HttpErrorEnum.NotFound
+        when(errorEnum){
+            HttpErrorEnum.NotFound -> TODO()
+            HttpErrorEnum.Unauthorized -> TODO()
         }
     }
 }

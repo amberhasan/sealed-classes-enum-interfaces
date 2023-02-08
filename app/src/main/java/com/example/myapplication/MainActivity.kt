@@ -10,10 +10,11 @@ class MainActivity : AppCompatActivity() {
         val error: HttpError = HttpError.NotFound
         when(error){
             HttpError.NotFound -> Unit
-            HttpError.Unauthorized -> Unit
+            is HttpError.Unauthorized -> Unit
         }
 
         val errorEnum: HttpErrorEnum = HttpErrorEnum.NotFound
+        HttpErrorEnum.values().forEach(::println)
         when(errorEnum){
             HttpErrorEnum.NotFound -> TODO()
             HttpErrorEnum.Unauthorized -> TODO()
